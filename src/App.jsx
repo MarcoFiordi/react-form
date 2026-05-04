@@ -2,7 +2,7 @@ import { useState } from "react";
 
 
 function App() {
-  const [articles, setArticles] = useState ([
+  const [articles, setArticles] = useState([
     {
       id: 1,
       titolo: "articolo 1",
@@ -20,11 +20,26 @@ function App() {
     },
 
   ]);
+
+  const [title, setTitle] = useState("");
+
   return (
     <>
       <h1>react-form</h1>
+      <input
+        type="text"
+        placeholder=""
+        value={title}
+        onChange={(event) => {
+          setTitle(event.target.value);
+          console.log(event.target.value);
+
+        }} />
+
+      
+
       <section>
-        {articles.map(function(article){
+        {articles.map(function (article) {
           return (
             <article key={article.id}>
               <h2>{article.titolo}</h2>
