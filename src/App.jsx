@@ -22,21 +22,40 @@ function App() {
   ]);
 
   const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
 
   return (
     <>
       <h1>react-form</h1>
-      <input
-        type="text"
-        placeholder=""
-        value={title}
-        onChange={(event) => {
-          setTitle(event.target.value);
-          console.log(event.target.value);
+      <div>
+        <input
+          type="text"
+          placeholder="titolo articolo"
+          value={title}
+          onChange={(event) => {
+            setTitle(event.target.value);
+            console.log(event.target.value);
 
-        }} />
+          }} />
+      </div>
 
-      
+      <div>
+        <textarea name=""
+          id=""
+          placeholder="contenuto articolo"
+          value={content}
+          onChange={(event) => {
+            setContent(event.target.value);
+            console.log(event.target.value);
+            
+          }}
+        >
+
+        </textarea>
+      </div>
+
+
+
 
       <section>
         {articles.map(function (article) {
