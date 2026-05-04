@@ -1,8 +1,8 @@
-
+import { useState } from "react";
 
 
 function App() {
-  const articles = [
+  const [articles, setArticles] = useState ([
     {
       id: 1,
       titolo: "articolo 1",
@@ -19,7 +19,7 @@ function App() {
       contenuto: "contenuto di articolo 3,"
     },
 
-  ]
+  ]);
   return (
     <>
       <h1>react-form</h1>
