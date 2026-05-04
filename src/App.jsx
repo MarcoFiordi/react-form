@@ -26,6 +26,15 @@ function App() {
 
   function handleSubmit(event) {
     event.preventDefault();
+
+    const newArticle = {
+      id: crypto.randomUUID,
+      titolo: title,
+      contenuto: content,
+    };
+
+    console.log(newArticle);
+    
   }
 
 
